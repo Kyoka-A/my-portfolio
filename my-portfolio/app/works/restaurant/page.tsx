@@ -31,7 +31,7 @@ export default function HomePage() {
     };
 
     return (
-        <div className="relative">
+        <div className="relative font-serif" style={{ fontFamily: "'游明朝体', 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'HG明朝E', 'ＭＳ Ｐ明朝', 'MS PMincho', serif" }}>
             {/* Header */}
             <header 
                 className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
@@ -39,16 +39,32 @@ export default function HomePage() {
                 }`}
             >
                 <div className="container mx-auto px-6 lg:px-12 py-6 flex justify-between items-center">
-                    <h1 className="text-sm tracking-[0.2em] font-light">
+                    <div className="flex items-center gap-6 lg:gap-10">
+                        {/* Back to Portfolio Button */}
                         <a 
-                            href="#home" 
-                            className={`transition-colors duration-300 ${
+                            href="/"
+                            className={`flex items-center gap-2 text-sm lg:text-base font-medium tracking-wide transition-all duration-300 hover:opacity-70 ${
                                 isScrolled ? 'text-gray-800' : 'text-white'
                             }`}
                         >
-                            BIO HARMONIE
+                            <svg className="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                            </svg>
+                            <span className="hidden sm:inline">Back to Portfolio</span>
+                            <span className="sm:hidden">Back</span>
                         </a>
-                    </h1>
+                        
+                        <h1 className="text-sm tracking-[0.2em] font-light">
+                            <a 
+                                href="#home" 
+                                className={`transition-colors duration-300 ${
+                                    isScrolled ? 'text-gray-800' : 'text-white'
+                                }`}
+                            >
+                                BIO HARMONIE
+                            </a>
+                        </h1>
+                    </div>
                     
                     {/* Hamburger Menu Button */}
                     <button
@@ -95,8 +111,8 @@ export default function HomePage() {
                                     <span className="text-5xl lg:text-6xl font-light tracking-[0.1em] group-hover:tracking-[0.15em] transition-all duration-300">
                                         {item.text}
                                     </span>
-                                </a>
-                            </li>
+                            </a>
+                        </li>
                         ))}
                     </ul>
                 </nav>
@@ -123,13 +139,13 @@ export default function HomePage() {
                             }}
                         >
                             <div className="absolute inset-0 bg-black/30" />
-                        </div>
-                    ))}
                 </div>
+                    ))}
+            </div>
                 
                 <div className="relative z-10 text-center text-white px-6 max-w-5xl mx-auto">
                     <h2 className="text-4xl md:text-5xl lg:text-7xl font-light leading-relaxed mb-8 tracking-wide drop-shadow-lg">
-                        大地の恵みと<br className="md:hidden" />フレンチの技が織りなす<br />
+                        大地の恵みと<br className="md:hidden" />フレンチの技が<br />織りなす<br />
                         至福のハーモニー
                     </h2>
                     <p className="text-lg md:text-xl lg:text-2xl font-light tracking-[0.15em] leading-relaxed opacity-90 drop-shadow-lg">
@@ -154,7 +170,7 @@ export default function HomePage() {
                     ))}
                 </div>
             </section>
-
+    
             {/* Calendar Section */}
             <section className="py-16 lg:py-32 bg-white">
                 <div className="container mx-auto px-3 sm:px-6 lg:px-12 max-w-6xl">
@@ -163,8 +179,8 @@ export default function HomePage() {
                             <div className="flex items-baseline gap-2 sm:gap-4">
                                 <span className="text-2xl sm:text-4xl lg:text-5xl font-light">2025</span>
                                 <span className="text-4xl sm:text-6xl lg:text-7xl font-light">11</span>
-                            </div>
                         </div>
+                    </div>
                         
                         <div className="p-3 sm:p-6 lg:p-12">
                             {/* Calendar Grid */}
@@ -172,7 +188,7 @@ export default function HomePage() {
                                 {['月', '火', '水', '木', '金', '土', '日'].map((day, i) => (
                                     <div key={day} className={`text-center py-2 sm:py-3 text-[10px] sm:text-sm font-medium ${i >= 5 ? 'text-red-500' : 'text-gray-600'}`}>
                                         {day}
-                                    </div>
+                        </div>
                                 ))}
                             </div>
                             
@@ -201,13 +217,13 @@ export default function HomePage() {
                                                         <span className="text-[9px] sm:text-xs text-gray-500">
                                                             {['月', '火', '水', '木', '金', '土', '日'][i % 7]}
                                                         </span>
-                                                    </div>
+                            </div>
                                                     {isClosed && !isPast && (
                                                         <p className="text-[8px] sm:text-[10px] text-gray-600 leading-tight">定休日</p>
                                                     )}
                                                 </>
                                             )}
-                                        </div>
+                            </div>
                                     );
                                 })}
                             </div>
@@ -235,26 +251,30 @@ export default function HomePage() {
                                         ※季節により変更あり
                                     </span>
                                 </dd>
-                            </div>
-                        </dl>
+                </div>
+                    </dl>
                     </div>
                 </div>
             </section>
-
+    
             {/* Concept Section */}
             <section id="concept" className="py-24 lg:py-32 bg-[#f8f9f5]">
                 <div className="container mx-auto px-6 lg:px-12">
                     <div className="flex items-baseline gap-6 mb-16">
                         <span className="text-xl text-[#6b8e23] font-light">01</span>
                         <h2 className="text-5xl lg:text-6xl font-light tracking-[0.2em]">Concept</h2>
-                    </div>
+                        </div>
 
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group">
-                            <div className="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200 group-hover:scale-105 transition-transform duration-700" />
-                            <div className="absolute inset-0 flex items-center justify-center text-green-600 text-lg font-light">
-                                画像エリア
-                            </div>
+                        <div 
+                            className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group"
+                            style={{
+                                backgroundImage: 'url(/restaurant/5.png)',
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center'
+                            }}
+                        >
+                            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all duration-700" />
                         </div>
 
                         <div className="space-y-8">
@@ -270,11 +290,11 @@ export default function HomePage() {
                             >
                                 Read More
                             </a>
-                        </div>
+                            </div>
                     </div>
                 </div>
             </section>
-
+    
             {/* Visual Section */}
             <section id="visual" className="py-24 lg:py-32 bg-white">
                 <div className="container mx-auto px-6 lg:px-12">
@@ -286,13 +306,25 @@ export default function HomePage() {
                     <div className="space-y-6">
                         {/* Row 1 */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
-                                <div className="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200 group-hover:scale-110 transition-transform duration-700" />
-                                <div className="absolute inset-0 flex items-center justify-center text-green-600 text-sm font-light">画像1</div>
+                            <div 
+                                className="relative aspect-square rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
+                                style={{
+                                    backgroundImage: 'url(/restaurant/4.png)',
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center'
+                                }}
+                            >
+                                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all duration-700" />
                             </div>
-                            <div className="relative aspect-square md:col-span-2 rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
-                                <div className="absolute inset-0 bg-gradient-to-br from-green-200 to-green-300 group-hover:scale-110 transition-transform duration-700" />
-                                <div className="absolute inset-0 flex items-center justify-center text-green-600 text-sm font-light">画像2</div>
+                            <div 
+                                className="relative aspect-square md:col-span-2 rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
+                                style={{
+                                    backgroundImage: 'url(/restaurant/8.png)',
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center'
+                                }}
+                            >
+                                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all duration-700" />
                             </div>
                         </div>
 
@@ -302,24 +334,36 @@ export default function HomePage() {
                                 <div className="absolute inset-0 bg-gradient-to-br from-green-300 to-green-400 group-hover:scale-110 transition-transform duration-700" />
                                 <div className="absolute inset-0 flex items-center justify-center text-green-600 text-sm font-light">画像3</div>
                             </div>
-                            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
-                                <div className="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200 group-hover:scale-110 transition-transform duration-700" />
-                                <div className="absolute inset-0 flex items-center justify-center text-green-600 text-sm font-light">画像4</div>
+                            <div 
+                                className="relative aspect-square rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
+                                style={{
+                                    backgroundImage: 'url(/restaurant/7.png)',
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center'
+                                }}
+                            >
+                                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all duration-700" />
                             </div>
                         </div>
 
                         {/* Row 3 */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
-                                <div className="absolute inset-0 bg-gradient-to-br from-green-200 to-green-300 group-hover:scale-110 transition-transform duration-700" />
-                                <div className="absolute inset-0 flex items-center justify-center text-green-600 text-sm font-light">画像5</div>
+                            <div 
+                                className="relative aspect-square rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
+                                style={{
+                                    backgroundImage: 'url(/restaurant/6.png)',
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center'
+                                }}
+                            >
+                                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all duration-700" />
                             </div>
                             <div className="relative aspect-square md:col-span-2 rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
                                 <div className="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200 group-hover:scale-110 transition-transform duration-700" />
                                 <div className="absolute inset-0 flex items-center justify-center text-green-600 text-sm font-light">画像6</div>
-                            </div>
-                        </div>
                     </div>
+                    </div>
+                </div>
 
                     <div className="mt-12 text-right">
                         <a 
@@ -329,16 +373,16 @@ export default function HomePage() {
                             Read More
                         </a>
                     </div>
-                </div>
+                    </div>
             </section>
-
+    
             {/* Menu Section */}
             <section id="menu" className="py-24 lg:py-32 bg-[#f8f9f5]">
                 <div className="container mx-auto px-6 lg:px-12">
                     <div className="flex items-baseline gap-6 mb-16">
                         <span className="text-xl text-[#6b8e23] font-light">03</span>
                         <h2 className="text-5xl lg:text-6xl font-light tracking-[0.2em]">Menu</h2>
-                    </div>
+                        </div>
 
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group">
@@ -361,18 +405,18 @@ export default function HomePage() {
                             >
                                 Read More
                             </a>
-                        </div>
+                            </div>
                     </div>
                 </div>
             </section>
-
+    
             {/* Access Section */}
             <section id="access" className="py-24 lg:py-32 bg-white">
                 <div className="container mx-auto px-6 lg:px-12">
                     <div className="flex items-baseline gap-6 mb-16">
                         <span className="text-xl text-[#6b8e23] font-light">04</span>
                         <h2 className="text-5xl lg:text-6xl font-light tracking-[0.2em]">Access</h2>
-                    </div>
+                        </div>
 
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group">
@@ -395,7 +439,7 @@ export default function HomePage() {
                             >
                                 Read More
                             </a>
-                        </div>
+                            </div>
                     </div>
                 </div>
             </section>
@@ -420,8 +464,8 @@ export default function HomePage() {
                                     >
                                         Google Map
                                     </a>
-                                </div>
-
+        </div>
+    
                                 <div>
                                     <p className="mb-3 opacity-90">03-5678-9012（完全予約制）</p>
                                     <a 
@@ -439,13 +483,13 @@ export default function HomePage() {
                                     <p>ランチ 11:30～15:00（L.O. 14:00）<br />
                                     ディナー 18:00～22:30（L.O. 21:00）<br />
                                     ※完全予約制</p>
-                                </div>
+                            </div>
                                 <div>
                                     <h4 className="font-semibold mb-2">定休日</h4>
                                     <p>毎週水曜日・木曜日</p>
-                                </div>
                             </div>
                         </div>
+                    </div>
 
                         <div>
                             <nav className="space-y-4 mb-8">
@@ -464,16 +508,16 @@ export default function HomePage() {
                                 <a href="#" className="block hover:opacity-100 transition-opacity">プライバシーポリシー</a>
                                 <a href="#" className="block hover:opacity-100 transition-opacity">利用規約</a>
                                 <a href="#" className="block hover:opacity-100 transition-opacity">お問い合わせ</a>
-                            </div>
                         </div>
                     </div>
+                </div>
 
                     <div className="pt-8 border-t border-white/20 text-center text-sm opacity-60 tracking-wider">
                         © 2025 Bio Harmonie. All rights reserved.
                     </div>
-                </div>
-            </footer>
-
+            </div>
+        </footer>
+    
             {/* Mobile Navigation */}
             <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-2xl z-40">
                 <div className="grid grid-cols-3 divide-x divide-gray-200">
@@ -490,7 +534,7 @@ export default function HomePage() {
                         <span className="text-xs">アクセス</span>
                     </a>
                 </div>
-            </nav>
+        </nav>
         </div>
     );
 }

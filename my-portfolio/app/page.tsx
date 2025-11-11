@@ -172,7 +172,7 @@ export default function Home() {
                   </p>
                 </div>
       
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                   {[
                     {
                       emoji: '🌐',
@@ -255,7 +255,7 @@ export default function Home() {
                           <h3 className="text-xl font-bold mb-2">レストランサイト</h3>
                           <p className="text-sm text-white/90 mb-2">おしゃれなレストランのイメージサイト</p>
                           <div className="flex gap-2 flex-wrap">
-                            <span className="px-2 py-1 bg-white/20 rounded text-xs">HTML/CSS</span>
+                            <span className="px-2 py-1 bg-white/20 rounded text-xs">Next.js</span>
                             <span className="px-2 py-1 bg-white/20 rounded text-xs">レスポンシブ</span>
                           </div>
                         </div>
@@ -279,7 +279,7 @@ export default function Home() {
                           <h3 className="text-xl font-bold mb-2">カフェサイト</h3>
                           <p className="text-sm text-white/90 mb-2">温かみのあるカフェのイメージサイト</p>
                           <div className="flex gap-2 flex-wrap">
-                            <span className="px-2 py-1 bg-white/20 rounded text-xs">HTML/CSS</span>
+                            <span className="px-2 py-1 bg-white/20 rounded text-xs">Next.js</span>
                             <span className="px-2 py-1 bg-white/20 rounded text-xs">レスポンシブ</span>
                           </div>
                         </div>
@@ -287,25 +287,29 @@ export default function Home() {
                     </div>
                   </a>
       
-                  {/* その他の制作例 */}
-                  {[
-                    { title: '美容室のサイト', tag: 'Coming Soon', emoji: '💇', color: 'from-[#FFB88C]/20 to-[#FFA07A]/20' },
-
-                  ].map((work, i) => (
-                    <div key={i} className="group cursor-pointer opacity-60">
-                      <div className="relative overflow-hidden rounded-3xl shadow-xl">
-                        <div className={`aspect-[4/3] bg-gradient-to-br ${work.color} p-8 flex items-center justify-center border-4 border-white`}>
-                          <div className="text-center">
-                            <div className="text-7xl mb-4">{work.emoji}</div>
-                            <div className="inline-block px-4 py-2 bg-white/95 rounded-full font-bold text-sm text-[#4A3F35] shadow-lg">
-                              {work.tag}
-                            </div>
+                  {/* Salon模擬サイト */}
+                  <a href="/works/salon" className="group cursor-pointer">
+                    <div className="relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all">
+                      <div className="aspect-[4/3] bg-gradient-to-br from-[#FFB88C]/20 via-[#FFA07A]/20 to-[#FF9A76]/20 p-8 flex items-center justify-center border-4 border-white">
+                        <div className="text-center">
+                          <div className="text-7xl mb-4 group-hover:scale-110 transition-transform">💇</div>
+                          <div className="inline-block px-4 py-2 bg-white/95 rounded-full font-bold text-sm text-[#4A3F35] shadow-lg">
+                            Salon
                           </div>
                         </div>
                       </div>
-                      <p className="text-center mt-3 font-semibold text-[#6B5D52]">{work.title}</p>
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#4A3F35]/95 via-[#4A3F35]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <div className="text-white">
+                          <h3 className="text-xl font-bold mb-2">美容室サイト</h3>
+                          <p className="text-sm text-white/90 mb-2">スタイリッシュな美容室のイメージサイト</p>
+                          <div className="flex gap-2 flex-wrap">
+                            <span className="px-2 py-1 bg-white/20 rounded text-xs">Next.js</span>
+                            <span className="px-2 py-1 bg-white/20 rounded text-xs">レスポンシブ</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  ))}
+                  </a>
                 </div>
       
                 <div className="text-center mt-12">
@@ -334,7 +338,7 @@ export default function Home() {
                     </p>
                     
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                      <a href="mailto:hello@example.com" className="px-10 py-5 bg-white text-[#FF8C5A] rounded-2xl hover:shadow-2xl hover:scale-105 transition-all font-bold text-lg">
+                      <a href="mailto:myname.is.akita@gmail.com" className="px-10 py-5 bg-white text-[#FF8C5A] rounded-2xl hover:shadow-2xl hover:scale-105 transition-all font-bold text-lg">
                         📧 メールで相談
                       </a>
                       <a href="https://docs.google.com/forms/d/e/1FAIpQLSckLbTMUy2i9x3zTebxTWQHGi9xjEmOzm38_Kqb97XLs2KKCg/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="px-10 py-5 bg-white/20 backdrop-blur-sm text-white rounded-2xl hover:bg-white/30 transition-all font-bold text-lg border-2 border-white/50">
@@ -363,11 +367,11 @@ export default function Home() {
                     </div>
       
                     <div className="mt-12 pt-8 border-t border-white/30">
-                      <p className="text-sm text-white/80 mb-4">お問い合わせ方法</p>
-                      <div className="flex flex-wrap justify-center gap-6 text-sm">
-                        <div className="flex items-center gap-2">
-                          <span className="text-xl">📧</span>
-                          <span>myname.is.akita@gmail.com</span>
+                      <p className="text-xl text-white/80 mb-4">お問い合わせ方法</p>
+                      <div className="flex flex-wrap justify-center gap-6">
+                        <div className="flex items-center gap-3">
+                          <span className="text-3xl">📧</span>
+                          <span className="text-xl md:text-2xl font-semibold">myname.is.akita@gmail.com</span>
                         </div>
                       </div>
                     </div>
