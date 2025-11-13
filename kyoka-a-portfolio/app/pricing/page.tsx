@@ -57,14 +57,6 @@ export default function Pricing() {
                   </div>
                   <div className="flex items-start gap-2 text-sm">
                     <span className="text-[#FF8C5A] mt-1">✓</span>
-                    <span>お問い合わせフォーム</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-sm">
-                    <span className="text-[#FF8C5A] mt-1">✓</span>
-                    <span>基本的なSEO対策</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-sm">
-                    <span className="text-[#FF8C5A] mt-1">✓</span>
                     <span>納期：3〜4週間</span>
                   </div>
                 </div>
@@ -99,14 +91,6 @@ export default function Pricing() {
                   </div>
                   <div className="flex items-start gap-2 text-sm">
                     <span className="text-[#FF8C5A] mt-1">✓</span>
-                    <span>ブログ機能</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-sm">
-                    <span className="text-[#FF8C5A] mt-1">✓</span>
-                    <span>更新方法レクチャー</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-sm">
-                    <span className="text-[#FF8C5A] mt-1">✓</span>
                     <span>SNS連携</span>
                   </div>
                   <div className="flex items-start gap-2 text-sm">
@@ -115,7 +99,7 @@ export default function Pricing() {
                   </div>
                 </div>
                 <p className="text-xs text-[#6B5D52] pt-4 border-t border-[#FFD4A3]">
-                  自分で更新したい方向け
+                  一番おすすめです！！
                 </p>
               </div>
             </div>
