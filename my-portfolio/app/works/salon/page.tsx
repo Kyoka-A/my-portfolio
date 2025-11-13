@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function SalonPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,8 +20,20 @@ export default function SalonPage() {
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 transition-all">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-16 py-6 flex items-center justify-between">
-          <div className="text-[28px] tracking-[0.15em]">
-            PRISM
+          <div className="flex items-center gap-4">
+            <Link 
+              href="/"
+              className="group flex items-center gap-2 px-4 py-2 rounded-full border-2 border-purple-200 hover:border-purple-600 hover:bg-purple-50 transition-all duration-300"
+            >
+              <svg className="w-5 h-5 text-purple-600 group-hover:translate-x-[-2px] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              <span className="text-[11px] tracking-[0.2em] font-light text-purple-600 hidden md:inline">HOME</span>
+            </Link>
+
+            <div className="text-[28px] tracking-[0.15em]">
+              PRISM
+            </div>
           </div>
 
           <button
@@ -45,6 +59,12 @@ export default function SalonPage() {
         {isMenuOpen && (
           <div className="lg:hidden fixed inset-0 bg-white z-40 flex items-center justify-center">
             <nav className="flex flex-col items-center gap-8 text-base tracking-[0.2em]">
+              <Link href="/" className="flex items-center gap-2 text-purple-600 hover:opacity-50">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                ホームに戻る
+              </Link>
               <a href="#home" onClick={() => setIsMenuOpen(false)} className="hover:opacity-50">HOME</a>
               <a href="#concept" onClick={() => setIsMenuOpen(false)} className="hover:opacity-50">CONCEPT</a>
               <a href="#menu" onClick={() => setIsMenuOpen(false)} className="hover:opacity-50">COLOR</a>
@@ -60,20 +80,30 @@ export default function SalonPage() {
 
       {/* Hero Section */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-50 via-fuchsia-50 to-rose-50 flex items-center justify-center">
-          <span className="text-[120px] text-gray-200 select-none">画像</span>
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/salon/1.png"
+            alt="PRISM Hair Color Salon"
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="100vw"
+          />
+          {/* Dark Overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
         </div>
 
         <div className="relative z-10 text-center px-4">
           <h1 className="mb-6">
-            <span className="block text-[80px] md:text-[120px] tracking-[0.25em] leading-none mb-2">
+            <span className="block text-[60px] sm:text-[80px] md:text-[120px] tracking-[0.25em] leading-none mb-2 text-white drop-shadow-2xl">
               PRISM
             </span>
-            <span className="block text-[20px] md:text-[28px] tracking-[0.6em]">
+            <span className="block text-[18px] sm:text-[20px] md:text-[28px] tracking-[0.6em] text-white drop-shadow-lg">
               COLOR SPECIALIST
             </span>
           </h1>
-          <p className="text-[13px] md:text-[15px] leading-loose tracking-wider">
+          <p className="text-[13px] md:text-[15px] leading-loose tracking-wider text-white drop-shadow-lg">
             最先端のカラー技術で<br className="md:hidden" />
             あなただけの色を創造する
           </p>
@@ -81,19 +111,19 @@ export default function SalonPage() {
 
         {/* SNS Icons */}
         <div className="absolute bottom-12 right-8 md:right-16 flex flex-col gap-6 z-20">
-          <a href="#" className="text-black hover:opacity-50 transition-opacity" aria-label="Instagram">
+          <a href="#" className="text-white hover:opacity-50 transition-opacity drop-shadow-lg" aria-label="Instagram">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
             </svg>
           </a>
-          <a href="#" className="text-black hover:opacity-50 transition-opacity" aria-label="TikTok">
+          <a href="#" className="text-white hover:opacity-50 transition-opacity drop-shadow-lg" aria-label="TikTok">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
             </svg>
           </a>
-          <a href="#" className="text-black hover:opacity-50 transition-opacity" aria-label="Line">
+          <a href="#" className="text-white hover:opacity-50 transition-opacity drop-shadow-lg" aria-label="Line">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
             </svg>
@@ -101,8 +131,8 @@ export default function SalonPage() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="hidden md:block absolute bottom-12 left-1/2 -translate-x-1/2">
-          <p className="text-[10px] tracking-[0.3em] [writing-mode:vertical-rl] font-light">
+        <div className="hidden md:block absolute bottom-12 left-1/2 -translate-x-1/2 z-20">
+          <p className="text-[10px] tracking-[0.3em] [writing-mode:vertical-rl] font-light text-white drop-shadow-lg">
             SCROLL
           </p>
         </div>
@@ -126,10 +156,14 @@ export default function SalonPage() {
               <div className="grid md:grid-cols-2 gap-12 md:gap-20">
                 {/* Left Image */}
                 <div className="space-y-6">
-                  <div className="aspect-[3/4] bg-gradient-to-br from-purple-100 via-pink-100 to-orange-100 relative overflow-hidden group">
-                    <div className="absolute inset-0 flex items-center justify-center text-gray-200 text-5xl">
-                      画像
-                    </div>
+                  <div className="aspect-[3/4] relative overflow-hidden group rounded-lg">
+                    <Image
+                      src="/salon/2.png"
+                      alt="PRISM Color Specialist"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
                   </div>
                   <p className="text-[12px] leading-loose text-center">
                     色彩理論に基づく<br />
@@ -139,20 +173,13 @@ export default function SalonPage() {
 
                 {/* Right Content */}
                 <div className="flex flex-col justify-center space-y-8">
-                  <div className="aspect-[3/4] md:aspect-auto md:h-auto bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 relative overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center text-gray-200 text-5xl">
-                      画像
-                    </div>
-                  </div>
-                  <div className="space-y-8">
-                    <p className="text-[14px] leading-loose">
-                      PRISMは、ヘアカラーに特化した専門サロンです。パリ・ロンドン・NYのトレンドを取り入れた最新技術と、髪を傷めないケアブリーチで、理想の発色を実現。一人ひとりの肌色・瞳の色に合わせた、パーソナルカラー診断も行っています。
-                    </p>
-                    <button className="group inline-flex items-center gap-3 text-[11px] tracking-[0.2em] hover:opacity-50 transition-opacity">
-                      <span>詳しく見る</span>
-                      <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
-                    </button>
-                  </div>
+                  <p className="text-[14px] leading-loose">
+                    PRISMは、ヘアカラーに特化した専門サロンです。パリ・ロンドン・NYのトレンドを取り入れた最新技術と、髪を傷めないケアブリーチで、理想の発色を実現。一人ひとりの肌色・瞳の色に合わせた、パーソナルカラー診断も行っています。
+                  </p>
+                  <button className="group inline-flex items-center gap-3 text-[11px] tracking-[0.2em] hover:opacity-50 transition-opacity">
+                    <span>詳しく見る</span>
+                    <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -182,18 +209,36 @@ export default function SalonPage() {
           <div className="space-y-32 md:space-y-48">
             {[
               { num: '01', title: 'バレイヤージュ', subtitle: 'パリ発、立体感を生み出す最新グラデーション技法' },
-              { num: '02', title: 'ハイライト＆ローライト', subtitle: '繊細な陰影で作る、ナチュラルな外国人風カラー' },
+              { num: '02', title: 'インナーカラー', subtitle: '内側に隠れたアクセントカラーで個性を演出' },
               { num: '03', title: 'ファッションカラー', subtitle: 'ピンク・ブルー・パープル等、個性を表現する鮮やかな色彩' }
             ].map((menuItem, index) => (
               <div key={menuItem.num} className={`grid md:grid-cols-2 gap-12 md:gap-20 items-center ${index % 2 === 1 ? 'md:grid-flow-dense' : ''}`}>
-                <div className={`aspect-[4/3] bg-gradient-to-br ${
-                  index === 0 ? 'from-amber-100 via-pink-100 to-purple-100' :
-                  index === 1 ? 'from-cyan-100 via-blue-100 to-purple-100' :
-                  'from-pink-100 via-purple-100 to-blue-100'
-                } relative overflow-hidden ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-200 text-5xl">
-                    画像
-                  </div>
+                <div className={`aspect-[4/3] relative overflow-hidden rounded-lg ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
+                  {index === 0 ? (
+                    <Image
+                      src="/salon/5.png"
+                      alt="バレイヤージュ"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  ) : index === 1 ? (
+                    <Image
+                      src="/salon/6.png"
+                      alt="インナーカラー"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  ) : (
+                    <Image
+                      src="/salon/8.png"
+                      alt="ファッションカラー"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  )}
                 </div>
 
                 <div className={`space-y-8 ${index % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}`}>
@@ -230,18 +275,15 @@ export default function SalonPage() {
           </h2>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-            {[
-              'from-pink-200 via-purple-200 to-blue-200',
-              'from-amber-200 via-orange-200 to-rose-200',
-              'from-cyan-200 via-blue-200 to-purple-200',
-              'from-violet-200 via-fuchsia-200 to-pink-200',
-              'from-lime-200 via-emerald-200 to-teal-200',
-              'from-rose-200 via-pink-200 to-purple-200'
-            ].map((gradient, num) => (
-              <div key={num} className={`aspect-square bg-gradient-to-br ${gradient} relative overflow-hidden group cursor-pointer`}>
-                <div className="absolute inset-0 flex items-center justify-center text-gray-200 text-4xl">
-                  画像
-                </div>
+            {['7', '9', '10', '11', '12', '13'].map((num) => (
+              <div key={num} className="aspect-square relative overflow-hidden group cursor-pointer rounded-lg">
+                <Image
+                  src={`/salon/${num}.png`}
+                  alt={`Gallery Image ${num}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500"></div>
               </div>
             ))}
@@ -269,7 +311,7 @@ export default function SalonPage() {
 
               <div>
                 <h3 className="text-[11px] tracking-[0.2em] mb-6">TEL</h3>
-                <p className="text-[15px]">03-6427-8910</p>
+                <p className="text-[15px]">03-1234-5678</p>
               </div>
 
               <div>
@@ -282,8 +324,17 @@ export default function SalonPage() {
               </div>
             </div>
 
-            <div className="aspect-square bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100 flex items-center justify-center text-gray-200 text-4xl">
-              地図
+            <div className="aspect-square relative overflow-hidden rounded-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.3662371732644!2d139.70762831525878!3d35.66525398019729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca4b3f3b0e5%3A0x4f0e8e1c5c5c5c5c!2z5p2x5Lqs6YO95riL6LC35Yy656We5a6u5YmN!5e0!3m2!1sja!2sjp!4v1234567890123!5m2!1sja!2sjp"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="PRISM Hair Color Salon Location"
+              ></iframe>
             </div>
           </div>
         </div>

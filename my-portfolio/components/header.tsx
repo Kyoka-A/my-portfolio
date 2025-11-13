@@ -26,19 +26,20 @@ export default function Header() {
     <header className="sticky top-0 z-[100] backdrop-blur-xl bg-white/70 border-b border-[#FFD4A3]/30 shadow-sm">
       <nav className="max-w-7xl mx-auto px-6 md:px-8 py-4 relative z-[100]">
         <div className="flex justify-between items-center">
-          <div className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <div className="w-11 h-11 bg-gradient-to-br from-[#FF9A76] to-[#FF8C5A] rounded-2xl flex items-center justify-center shadow-lg">
               <span className="text-white font-bold text-xl">あ</span>
             </div>
             <span className="text-xl font-bold tracking-wide">秋田きょうか</span>
-          </div>
+          </a>
           
           {/* デスクトップメニュー */}
           <ul className="hidden md:flex items-center gap-6 text-sm font-semibold">
-            <li><a href="#about" className="hover:text-[#FF8C5A] transition-colors px-3 py-2">自己紹介</a></li>
-            <li><a href="#skill" className="hover:text-[#FF8C5A] transition-colors px-3 py-2">できること</a></li>
-            <li><a href="#works" className="hover:text-[#FF8C5A] transition-colors px-3 py-2">制作例</a></li>
-            <li><a href="#contact" className="px-6 py-2.5 bg-gradient-to-r from-[#FF9A76] to-[#FF8C5A] text-white rounded-full hover:shadow-xl hover:scale-105 transition-all font-bold">お問い合わせ</a></li>
+            <li><a href="/#about" className="hover:text-[#FF8C5A] transition-colors px-3 py-2">自己紹介</a></li>
+            <li><a href="/#skill" className="hover:text-[#FF8C5A] transition-colors px-3 py-2">できること</a></li>
+            <li><a href="/pricing" className="hover:text-[#FF8C5A] transition-colors px-3 py-2">料金表</a></li>
+            <li><a href="/#works" className="hover:text-[#FF8C5A] transition-colors px-3 py-2">制作例</a></li>
+            <li><a href="/#contact" className="px-6 py-2.5 bg-gradient-to-r from-[#FF9A76] to-[#FF8C5A] text-white rounded-full hover:shadow-xl hover:scale-105 transition-all font-bold">お問い合わせ</a></li>
           </ul>
 
           {/* ハンバーガーボタン */}
@@ -78,7 +79,7 @@ export default function Header() {
             <ul className="flex flex-col gap-4">
               <li>
                 <a 
-                  href="#about" 
+                  href="/#about" 
                   onClick={closeMenu}
                   className="block hover:text-[#FF8C5A] transition-colors px-3 py-2 font-semibold text-[#4A3F35]"
                 >
@@ -87,7 +88,7 @@ export default function Header() {
               </li>
               <li>
                 <a 
-                  href="#skill" 
+                  href="/#skill" 
                   onClick={closeMenu}
                   className="block hover:text-[#FF8C5A] transition-colors px-3 py-2 font-semibold text-[#4A3F35]"
                 >
@@ -96,7 +97,16 @@ export default function Header() {
               </li>
               <li>
                 <a 
-                  href="#works" 
+                  href="/pricing" 
+                  onClick={closeMenu}
+                  className="block hover:text-[#FF8C5A] transition-colors px-3 py-2 font-semibold text-[#4A3F35]"
+                >
+                  料金表
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/#works" 
                   onClick={closeMenu}
                   className="block hover:text-[#FF8C5A] transition-colors px-3 py-2 font-semibold text-[#4A3F35]"
                 >
@@ -105,7 +115,7 @@ export default function Header() {
               </li>
               <li>
                 <a 
-                  href="#contact" 
+                  href="/#contact" 
                   onClick={closeMenu}
                   className="block px-6 py-3 bg-gradient-to-r from-[#FF9A76] to-[#FF8C5A] text-white rounded-full hover:shadow-xl transition-all font-bold text-center"
                 >
@@ -119,4 +129,3 @@ export default function Header() {
     </header>
   );
 }
-

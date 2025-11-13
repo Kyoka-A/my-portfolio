@@ -179,7 +179,7 @@ export default function Home() {
                       title: 'ホームページ制作',
                       price: '3万円〜',
                       desc: 'シンプルな企業サイトや個人のポートフォリオサイトなど、ご要望に応じた制作を行います。',
-                      features: ['レスポンシブ対応', 'お問い合わせフォーム', '5ページまで']
+                      features: ['レスポンシブ対応', 'お問い合わせフォーム', '何ページでも対応']
                     },
                     {
                       emoji: '✏️',
@@ -231,9 +231,9 @@ export default function Home() {
                     Works
                   </span>
                   <h2 className="text-4xl md:text-5xl font-bold text-[#4A3F35] mb-6">
-                    制作例
+                    制作例<br/>（メインページのみ）
                   </h2>
-                  <p className="text-lg text-[#6B5D52] max-w-2xl mx-auto">
+                  <p className="text-xl text-[#6B5D52] max-w-2xl mx-auto">
                     実際に作成した模擬サイトをご覧いただけます
                   </p>
                 </div>
