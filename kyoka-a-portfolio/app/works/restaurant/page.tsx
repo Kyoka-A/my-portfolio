@@ -330,9 +330,15 @@ export default function HomePage() {
 
                         {/* Row 2 */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div className="relative aspect-square md:col-span-2 rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
-                                <div className="absolute inset-0 bg-gradient-to-br from-green-300 to-green-400 group-hover:scale-110 transition-transform duration-700" />
-                                <div className="absolute inset-0 flex items-center justify-center text-green-600 text-sm font-light">画像3</div>
+                            <div 
+                                className="relative aspect-square md:col-span-2 rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
+                                style={{
+                                    backgroundImage: 'url(/restaurant/10.png)',
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center'
+                                }}
+                            >
+                                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all duration-700" />
                             </div>
                             <div 
                                 className="relative aspect-square rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
@@ -358,9 +364,15 @@ export default function HomePage() {
                             >
                                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all duration-700" />
                             </div>
-                            <div className="relative aspect-square md:col-span-2 rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
-                                <div className="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200 group-hover:scale-110 transition-transform duration-700" />
-                                <div className="absolute inset-0 flex items-center justify-center text-green-600 text-sm font-light">画像6</div>
+                            <div 
+                                className="relative aspect-square md:col-span-2 rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
+                                style={{
+                                    backgroundImage: 'url(/restaurant/11.png)',
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center'
+                                }}
+                            >
+                                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all duration-700" />
                     </div>
                     </div>
                 </div>
@@ -385,11 +397,15 @@ export default function HomePage() {
                         </div>
 
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group">
-                            <div className="absolute inset-0 bg-gradient-to-br from-amber-100 to-green-200 group-hover:scale-105 transition-transform duration-700" />
-                            <div className="absolute inset-0 flex items-center justify-center text-green-600 text-lg font-light">
-                                画像エリア
-                            </div>
+                        <div 
+                            className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group"
+                            style={{
+                                backgroundImage: 'url(/restaurant/12.png)',
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center'
+                            }}
+                        >
+                            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all duration-700" />
                         </div>
 
                         <div className="space-y-8">
@@ -419,11 +435,17 @@ export default function HomePage() {
                         </div>
 
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group">
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-green-200 group-hover:scale-105 transition-transform duration-700" />
-                            <div className="absolute inset-0 flex items-center justify-center text-green-600 text-lg font-light">
-                                地図エリア
-                            </div>
+                        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.0279886661584!2d139.70765931525826!3d35.66417438019896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c820c8c3b3d%3A0x6e8b5c5c5c5c5c5c!2z56We5a6u5YmN77yV5LiB55uu!5e0!3m2!1sja!2sjp!4v1620000000000!5m2!1sja!2sjp"
+                                width="100%" 
+                                height="100%" 
+                                style={{ border: 0 }} 
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                className="absolute inset-0"
+                            />
                         </div>
 
                         <div className="space-y-8">
