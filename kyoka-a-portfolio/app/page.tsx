@@ -78,7 +78,7 @@ export default function Home() {
                           あなたの想いを<br />デザインに
                         </p>
                         <div className="flex gap-2">
-                          <span className="px-3 py-1 bg-[#FFE8D6] rounded-full text-xs font-bold">WordPress</span>
+                          <span className="px-3 py-1 bg-[#FFE8D6] rounded-full text-xs font-bold">Next.js</span>
                           <span className="px-3 py-1 bg-[#FFE8D6] rounded-full text-xs font-bold">レスポンシブ</span>
                         </div>
                       </div>
@@ -138,7 +138,7 @@ export default function Home() {
                         Web制作を勉強し始めて6ヶ月の新米フリーランスです。まだまだ駆け出しですが、<span className="font-bold text-[#FF8C5A]">丁寧なヒアリングと真摯な対応</span>で、お客様の想いを形にするお手伝いをさせていただきます！
                       </p>
                       <p>
-                        大手制作会社と違い、<span className="font-bold text-[#FF8C5A]">低価格で柔軟に対応</span>できることが強みです。まずはお気軽にご相談ください 😊
+                        大手制作会社と違い、<span className="font-bold text-[#FF8C5A]">低価格で柔軟に対応</span>できることが強みです。<br />まずはお気軽にご相談ください 😊
                       </p>
                       
                       <div className="pt-6 space-y-3">
@@ -172,46 +172,31 @@ export default function Home() {
                   </p>
                 </div>
       
-                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                  {[
-                    {
-                      emoji: '🌐',
-                      title: 'ホームページ制作',
-                      price: '3万円〜',
-                      desc: 'シンプルな企業サイトや個人のポートフォリオサイトなど、ご要望に応じた制作を行います。',
-                      features: ['レスポンシブ対応', 'お問い合わせフォーム', '何ページでも対応']
-                    },
-                    {
-                      emoji: '✏️',
-                      title: 'WordPress構築',
-                      price: '4万円〜',
-                      desc: '自分で更新できるWordPressサイトを構築。ブログやお知らせの更新が簡単にできます。',
-                      features: ['テーマカスタマイズ', '更新方法レクチャー', 'プラグイン設定']
-                    }
-                  ].map((service, i) => (
-                    <div key={i} className="group">
-                      <div className="h-full p-8 bg-white rounded-3xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all border-4 border-[#FFE8D6]">
-                        <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">{service.emoji}</div>
-                        <h3 className="text-2xl font-bold text-[#4A3F35] mb-2">
-                          {service.title}
+                <div className="max-w-2xl mx-auto">
+                  <div className="group">
+                    <div className="h-full p-10 bg-white rounded-3xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all border-4 border-[#FFE8D6]">
+                      <div className="text-center">
+                        <div className="text-8xl mb-6 group-hover:scale-110 transition-transform">🌐</div>
+                        <h3 className="text-3xl font-bold text-[#4A3F35] mb-4">
+                          ホームページ制作
                         </h3>
-                        <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#FF9A76] to-[#FF8C5A] text-white rounded-full font-bold mb-4">
-                          {service.price}
+                        <div className="inline-block px-6 py-3 bg-gradient-to-r from-[#FF9A76] to-[#FF8C5A] text-white rounded-full font-bold text-xl mb-6">
+                          3万円〜
                         </div>
-                        <p className="text-[#6B5D52] mb-6 leading-relaxed">
-                          {service.desc}
+                        <p className="text-lg text-[#6B5D52] mb-8 leading-relaxed">
+                          シンプルな企業サイトや個人のポートフォリオサイトなど、ご要望に応じた制作を行います。
                         </p>
-                        <div className="space-y-2">
-                          {service.features.map((feature, j) => (
-                            <div key={j} className="flex items-center gap-2 text-sm">
-                              <span className="text-[#FF8C5A]">✓</span>
+                        <div className="space-y-3">
+                          {['レスポンシブ対応', 'お問い合わせフォーム', '何ページでも対応'].map((feature, j) => (
+                            <div key={j} className="flex items-center justify-center gap-3 text-base">
+                              <span className="text-[#FF8C5A] text-xl">✓</span>
                               <span>{feature}</span>
                             </div>
                           ))}
                         </div>
                       </div>
                     </div>
-                  ))}
+                  </div>
                 </div>
       
                 <div className="mt-12 p-8 bg-gradient-to-r from-[#FFE8D6] to-[#FFD4A3] rounded-3xl text-center">
@@ -221,6 +206,65 @@ export default function Home() {
                   <p className="text-[#6B5D52]">
                     まずはお気軽にご相談ください。無料でお見積もりいたします。
                   </p>
+                </div>
+              </section>
+      
+              {/* 制作実績セクション */}
+              <section id="portfolio" className="max-w-7xl mx-auto px-6 md:px-8 py-24">
+                <div className="text-center mb-16">
+                  <span className="inline-block px-5 py-2 bg-gradient-to-r from-[#FFE8D6] to-[#FFD4A3] rounded-full text-sm font-bold text-[#8B5E3C] mb-4">
+                    Portfolio
+                  </span>
+                  <h2 className="text-4xl md:text-5xl font-bold text-[#4A3F35] mb-6">
+                    制作実績
+                  </h2>
+                  <p className="text-xl text-[#6B5D52] max-w-2xl mx-auto">
+                    実際に制作させていただいたサイトをご紹介します
+                  </p>
+                </div>
+      
+                <div className="max-w-3xl mx-auto">
+                  <a href="https://okayama-u-cvs.com/" target="_blank" rel="noopener noreferrer" className="group cursor-pointer block">
+                    <div className="relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all bg-white border-4 border-[#FFE8D6]">
+                      <div className="aspect-[16/9] bg-gradient-to-br from-blue-50 via-white to-blue-100 p-12 flex items-center justify-center">
+                        <div className="text-center space-y-6">
+                          <div className="text-8xl mb-6 group-hover:scale-110 transition-transform">🏥</div>
+                          <h3 className="text-3xl font-bold text-[#4A3F35] mb-3">岡山大学病院 心臓血管外科</h3>
+                          <p className="text-lg text-[#6B5D52] leading-relaxed mb-4">
+                            岡山大学学術研究院医歯薬学域<br />公式Webサイト
+                          </p>
+                          <div className="flex gap-3 justify-center flex-wrap">
+                            <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-bold">医療系</span>
+                            <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-bold">レスポンシブ</span>
+                            <span className="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-bold">多言語対応</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#4A3F35]/90 via-[#4A3F35]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                        <div className="text-white w-full">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <h4 className="text-2xl font-bold mb-2">岡山大学病院 心臓血管外科</h4>
+                              <p className="text-sm text-white/90 mb-3">医療機関の公式Webサイト制作</p>
+                            </div>
+                            <div className="text-4xl">→</div>
+                          </div>
+                          <p className="text-sm text-white/80 mb-4">クリックしてサイトを見る</p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+      
+                <div className="text-center mt-12">
+                  <div className="inline-block p-6 bg-gradient-to-r from-[#FFE8D6] to-[#FFD4A3] rounded-3xl">
+                    <p className="text-[#4A3F35] font-semibold mb-2">
+                      🎉 実案件の制作実績ができました！
+                    </p>
+                    <p className="text-sm text-[#6B5D52]">
+                      今後も丁寧な制作を心がけ、お客様の期待に応えていきます。
+                    </p>
+                  </div>
                 </div>
               </section>
       
