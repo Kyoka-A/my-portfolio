@@ -135,7 +135,7 @@ export default function Home() {
                         <span className="font-bold text-[#FF8C5A] text-2xl">秋田きょうか</span>と申します！
                       </p>
                       <p>
-                        Web制作を勉強し始めて6ヶ月の新米フリーランスです。まだまだ駆け出しですが、<span className="font-bold text-[#FF8C5A]">丁寧なヒアリングと真摯な対応</span>で、お客様の想いを形にするお手伝いをさせていただきます！
+                        Web制作を勉強し始めて7ヶ月の新米フリーランスです。まだまだ駆け出しですが、<span className="font-bold text-[#FF8C5A]">丁寧なヒアリングと真摯な対応</span>で、お客様の想いを形にするお手伝いをさせていただきます！
                       </p>
                       <p>
                         大手制作会社と違い、<span className="font-bold text-[#FF8C5A]">低価格で柔軟に対応</span>できることが強みです。<br />まずはお気軽にご相談ください 😊

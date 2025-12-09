@@ -82,7 +82,6 @@ export default function Pricing() {
                   <div className="text-4xl font-bold text-[#FF8C5A] mb-2">
                     4万円<span className="text-lg">〜</span>
                   </div>
-                  <p className="text-sm text-[#6B5D52]">WordPress対応</p>
                 </div>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-start gap-2 text-sm">
