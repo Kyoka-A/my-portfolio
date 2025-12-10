@@ -209,65 +209,6 @@ export default function Home() {
                 </div>
               </section>
       
-              {/* 制作実績セクション */}
-              <section id="portfolio" className="max-w-7xl mx-auto px-6 md:px-8 py-24">
-                <div className="text-center mb-16">
-                  <span className="inline-block px-5 py-2 bg-gradient-to-r from-[#FFE8D6] to-[#FFD4A3] rounded-full text-sm font-bold text-[#8B5E3C] mb-4">
-                    Portfolio
-                  </span>
-                  <h2 className="text-4xl md:text-5xl font-bold text-[#4A3F35] mb-6">
-                    制作実績
-                  </h2>
-                  <p className="text-xl text-[#6B5D52] max-w-2xl mx-auto">
-                    実際に制作させていただいたサイトをご紹介します
-                  </p>
-                </div>
-      
-                <div className="max-w-3xl mx-auto">
-                  <a href="https://okayama-u-cvs.com/" target="_blank" rel="noopener noreferrer" className="group cursor-pointer block">
-                    <div className="relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all bg-white border-4 border-[#FFE8D6]">
-                      <div className="aspect-[16/9] bg-gradient-to-br from-blue-50 via-white to-blue-100 p-12 flex items-center justify-center">
-                        <div className="text-center space-y-6">
-                          <div className="text-8xl mb-6 group-hover:scale-110 transition-transform">🏥</div>
-                          <h3 className="text-3xl font-bold text-[#4A3F35] mb-3">岡山大学病院 心臓血管外科</h3>
-                          <p className="text-lg text-[#6B5D52] leading-relaxed mb-4">
-                            岡山大学学術研究院医歯薬学域<br />公式Webサイト
-                          </p>
-                          <div className="flex gap-3 justify-center flex-wrap">
-                            <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-bold">医療系</span>
-                            <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-bold">レスポンシブ</span>
-                            <span className="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-bold">多言語対応</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#4A3F35]/90 via-[#4A3F35]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
-                        <div className="text-white w-full">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <h4 className="text-2xl font-bold mb-2">岡山大学病院 心臓血管外科</h4>
-                              <p className="text-sm text-white/90 mb-3">医療機関の公式Webサイト制作</p>
-                            </div>
-                            <div className="text-4xl">→</div>
-                          </div>
-                          <p className="text-sm text-white/80 mb-4">クリックしてサイトを見る</p>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-      
-                <div className="text-center mt-12">
-                  <div className="inline-block p-6 bg-gradient-to-r from-[#FFE8D6] to-[#FFD4A3] rounded-3xl">
-                    <p className="text-[#4A3F35] font-semibold mb-2">
-                      🎉 実案件の制作実績ができました！
-                    </p>
-                    <p className="text-sm text-[#6B5D52]">
-                      今後も丁寧な制作を心がけ、お客様の期待に応えていきます。
-                    </p>
-                  </div>
-                </div>
-              </section>
-      
               {/* 制作例セクション */}
               <section id="works" className="max-w-7xl mx-auto px-6 md:px-8 py-24">
                 <div className="text-center mb-16">
